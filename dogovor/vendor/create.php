@@ -17,8 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $datefinish = $_POST['datefinish'];
     $avans = $_POST['avans'];
 
-    $stmt = $connect->prepare("INSERT INTO dogovor (id_d, id_firm, numberd, named, sumd, datestart, datefinish, avans) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?);
-");
+    $stmt = $connect->prepare("INSERT INTO dogovor (id_d, id_firm, numberd, named, sumd, datestart, datefinish, avans) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->execute([$id, $numberd, $name, $sumd, $datestart, $datefinish, $avans]);
 
     header('Location: ../dogovor.php');
