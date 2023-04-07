@@ -41,7 +41,6 @@ $select = $connect->query('SELECT id_firm, name FROM firm');
         </tr>
         <?php
     }
-    //INSERT INTO `dogovor` (`id_d`, `id_firm`, `numberd`, `named`, `sumd`, `datestart`, `datefinish`, `avans`) VALUES (NULL, '1', '10932', 'Купівля 50% акцій компанії.', '470000', '2023-04-01', '2023-04-01', '350000');
 
     ?>
 </table>
@@ -50,10 +49,10 @@ $select = $connect->query('SELECT id_firm, name FROM firm');
 
     <p>Назва фірми</p>
     <label>
-        <select name="name">
+        <select name="firm">
             <?php
             while ($res = $select->fetch()) { ?>
-                <option value="<?php echo 'id: '.$res['id_firm'].' Назва: '.$res['name']; ?>">
+                <option value="<?php echo $res['id_firm'].':'.$res['name']; ?>">
                     <?php echo 'id: '.$res['id_firm'].' Назва: '.$res['name']; ?></option>
             <?php } ?>
         </select>
@@ -64,7 +63,7 @@ $select = $connect->query('SELECT id_firm, name FROM firm');
     </label>
     <p>Назва</p>
     <label>
-        <input type="text" name="numberd">
+        <input type="text" name="name">
     </label>
     <p>Сума</p>
     <label>
