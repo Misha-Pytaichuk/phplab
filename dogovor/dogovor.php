@@ -54,8 +54,8 @@ if(isset($_GET['search_results'])) {
             <td><?= $row['datestart'] ?></td>
             <td><?= $row['datefinish'] ?></td>
             <td><?= $row['avans'] ?></td>
-            <td><a href="blocks/update.php?id=<?= $dogovor[0] ?>">Редагувати</a></td>
-            <td><a href="vendor/delete.php?id=<?= $dogovor[0] ?>">Видалити</a></td>
+            <td><a href="blocks/update.php?id=<?= $row['id_d'] ?>">Редагувати</a></td>
+            <td><a href="vendor/delete.php?id=<?= $row['id_d'] ?>">Видалити</a></td>
         </tr>
         <?php
     }
