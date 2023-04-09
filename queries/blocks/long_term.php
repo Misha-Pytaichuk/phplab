@@ -1,5 +1,5 @@
 <header><a href = '/firmadogovor/index.php'>Головна</a></header>
-<header><h1>Знайти суму всіх контрактів за вказаний період</h1></header>
+<header><h1>Довгострокові контракти</h1></header>
 
 <?php
 
