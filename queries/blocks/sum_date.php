@@ -33,7 +33,7 @@ else{
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $dogovor[] = $row;
         }
-     $stmt = $connect->prepare("SELECT SUM(sumd) as 'sum' FROM dogovor JOIN firm ON dogovor.id_firm = firm.id_firm WHERE dogovor.id_firm = ?");
+     $stmt = $connect->prepare("SELECT SUM(sumd) as 'sum' FROM dogovor WHERE dogovor.id_firm = ?");
      $stmt->execute(array($id_firm));
 
     $sum = $stmt->fetchColumn();
