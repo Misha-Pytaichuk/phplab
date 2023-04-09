@@ -1,5 +1,5 @@
 <?php
-require_once '../blocks/connectorPOD.php';
+require_once '../blocks/connectorPDO.php';
 
 /**
  * @var $connect
