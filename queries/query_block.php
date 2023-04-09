@@ -46,9 +46,9 @@ if(isset($_GET['search_results'])) {
             <td><?= $firm['name'] ?></td>
             <td><?= $firm['shef'] ?></td>
             <td><?= $firm['address'] ?></td>
-            <td><a href="blocks/only_date.php?id=<?= $firm['id_firm'] ?>">Контракти по датам</a></td>
-            <td><a href="vendor/delete.php?id=<?= $firm['id_firm'] ?>">Суми контрактів по датам</a></td>
-            <td><a href="vendor/delete.php?id=<?= $firm['id_firm'] ?>">Довгострокові контракти</a></td>
+            <td><a href="blocks/only_date.php?id_firm=<?= $firm['id_firm'] ?>">Контракти по датам</a></td>
+            <td><a href="blocks/sum_date.php?id_firm=<?= $firm['id_firm'] ?>">Суми контрактів по датам</a></td>
+            <td><a href="blocks/long_term.php?id_firm">Довгострокові контракти</a></td>
         </tr>
         <?php
     }

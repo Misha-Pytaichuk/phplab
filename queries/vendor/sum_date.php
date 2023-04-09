@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 
-    $search_results_url = '../blocks/only_date.php?date_search_results=' . urlencode(serialize($results));
+    $search_results_url = '../blocks/sum_date.php?sum_date=' . urlencode(serialize($results));
 
     header('Location:'. $search_results_url);
     exit();
